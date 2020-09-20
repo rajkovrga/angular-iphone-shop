@@ -53,12 +53,16 @@ export class BuyFormComponent implements OnInit {
   get address(): any { return this.formGroup.get('address'); }
   onSubmit(): any  {
     this.submitted = true;
-    if (!this.formGroup.invalid) {
+    if (this.formGroup.invalid) {
       return;
     }
-    this.cartService.removeAllItems();
-    this.router.navigate(['/products']);
-    alert('Uspešno kupljeno');
+    else
+    {
+      this.cartService.removeAllItems();
+      this.router.navigate(['/products']);
+      alert('Uspešno kupljeno');
+    }
+
   }
 
 }

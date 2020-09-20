@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {Product} from '../../models/product';
 import {ProductService} from '../../services/product.service';
@@ -10,7 +10,7 @@ import {CartService} from '../../services/cart.service';
   templateUrl: './one-product.component.html',
   styleUrls: ['./one-product.component.css']
 })
-export class OneProductComponent implements OnInit {
+export class OneProductComponent implements OnInit, OnDestroy {
   product: Product;
   subscription: Subscription;
   id: any;
@@ -42,5 +42,8 @@ export class OneProductComponent implements OnInit {
     }
     this.cartService.addToCart(item);
     alert('Dodat proizvod u korpu');
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

@@ -13,15 +13,15 @@
     </option>
   </select>
   <div id="search">
-    <input type="text" id="searchText" [(ngModel)]="searchText"/>
-    <div id="buttonSearch">
+    <input [@openSearch]="showSearch ? 'open' : 'close'" type="text" id="searchText" [(ngModel)]="searchText"/>
+    <div (click)="searchToggle()" id="buttonSearch">
       <i class="fa fa-search" aria-hidden="true"></i>
     </div>
   </div>
 </div>
 <div class="element allProducts">
   <div id="productsAllSec">
-    <a class="product-child" [routerLink]="['/products/',product.id]"
+    <a @flyInOut class="product-child" [routerLink]="['/products/',product.id]"
        *ngFor="let product of products | search: searchText | sort: sortValue" id="productAllSec">
         <div class="productSec">
           <div class="photoProductSec">
