@@ -1,0 +1,48 @@
+<div class="content">
+  <div class="element titleSecond">
+    <h1>Buy Form</h1>
+  </div>
+  <div id="form-box">
+    <div id="form" >
+      <form (submit)="onSubmit()" [formGroup]="formGroup">
+        <p>First Name</p>
+        <input type="text" formControlName="firstName"/>
+        <div *ngIf="submitted && firstName.errors">
+          <p *ngIf="firstName.errors.required" class="error"> First name is required</p>
+          <p *ngIf="firstName.errors.maxlength" class="error"> First name must be a maximum of 15</p>
+          <p *ngIf="firstName.errors.minLength" class="error"> First name must be at least 3</p>
+        </div>
+        <p>Last Name</p>
+        <input type="text" formControlName="lastName" />
+        <div *ngIf="submitted && lastName.errors">
+          <p *ngIf="lastName.errors.required" class="error"> Last name is required</p>
+          <p *ngIf="lastName.errors.maxlength" class="error"> Last name must be a maximum of 15</p>
+          <p *ngIf="lastName.errors.minLength" class="error"> Last name must be at least 3</p>
+        </div>
+        <p>Address</p>
+        <input type="text" formControlName="address" />
+        <div *ngIf="submitted && address.errors">
+          <p *ngIf="address.errors.required" class="error"> Address is required</p>
+          <p *ngIf="address.errors.maxlength" class="error"> Address must be a maximum of 50</p>
+          <p *ngIf="address.errors.minLength" class="error"> Address must be at least 10</p>
+          <p *ngIf="address.errors.pattern" class="error"> Address is not correct</p>
+        </div>
+        <p>E-mail</p>
+        <input type="text" formControlName="email"  />
+        <div *ngIf="submitted && email.errors">
+          <p *ngIf="email.errors.required" class="error"> Email is required</p>
+          <p *ngIf="email.errors.email" class="error"> Email is not correct</p>
+        </div>
+        <p>Description</p>
+        <textarea formControlName="description" id="descContact" resize="none"></textarea>
+        <div *ngIf="submitted && description.errors">
+          <p *ngIf="description.errors.required" class="error"> Description is required</p>
+          <p *ngIf="description.errors.maxlength" class="error"> Description must be a maximum of 300</p>
+        </div>
+        <input type="submit" id="send" value="Buy" />
+      </form>
+      <b  id="totalPrice">Ukupan iznos: {{this.totalPrice}}€</b>
+    </div>
+  </div>
+
+</div>

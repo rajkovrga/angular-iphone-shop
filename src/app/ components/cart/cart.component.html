@@ -1,0 +1,36 @@
+<div class="content">
+  <div class="element titleSecond">
+    <h1>Cart</h1>
+  </div>
+<div class="element articles">
+
+  <div  class="articlesList" id="articlesList">
+    <table *ngIf="(items).length != 0">
+      <tr>
+        <td><b>Articles</b></td>
+        <td><b>Prices</b></td>
+        <td><b> Quantity </b></td>
+      </tr>
+      <tr *ngFor="let item of items; let i = index">
+        <td class="cell-cart">{{item.model}}</td>
+        <td class="cell-cart">{{item.price}}€</td>
+        <td class='qunatity'><i (click)="onIncrement(i)" class="fa fa-plus changeQunatity" aria-hidden="true"></i>
+          <span>{{item.quantity}}</span> <i (click)="onDecrement(i)" class="fa fa-minus changeQunatity" aria-hidden="true"></i>
+        </td>
+        <td (click)="removeItem(i)" class='delete deleteItem'><i class="fa fa-trash" aria-hidden="true"></i></td>
+      </tr>
+      <tr> <td id='total'>Total:</td>
+        <td>{{totalPrice}}€</td>
+      </tr><tr>
+      <td id="withoutBg"></td>
+      <td (click)="buy()" id="buy">Buy</td></tr>
+    </table>
+  </div>
+  <div class="empty" *ngIf="(items).length == 0">
+    <div class="text">
+      <i class="fas fa-shopping-basket"></i>
+      <p>Your cart is empty</p>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,39 @@
+<div class="element titleSecond">
+  <h1>All products</h1>
+</div>
+
+<div class="element search">
+  <select >
+    <option value="-1">Select...</option>
+    <option (click)="sortProducts('asc')">
+      Cena rastuca
+    </option>
+    <option (click)="sortProducts('desc')">
+      Cena opadajuca
+    </option>
+  </select>
+  <div id="search">
+    <input type="text" id="searchText" [(ngModel)]="searchText"/>
+    <div id="buttonSearch">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+<div class="element allProducts">
+  <div id="productsAllSec">
+    <a class="product-child" [routerLink]="['/products/',product.id]"
+       *ngFor="let product of products | search: searchText | sort: sortValue" id="productAllSec">
+        <div class="productSec">
+          <div class="photoProductSec">
+            <img src="assets/img/{{product.photo.src}}" alt="{{product.photo.alt}}">
+            <p>{{product.price}}€</p>
+          </div>
+          <div class="photoInfoSec"><p class="modelName">{{product.model}}</p></div>
+        </div>
+
+  </a>
+    <div id="noresult" *ngIf="(products | search: searchText).length == 0">
+      <p>No result</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="element titleSecond">
+  <h3>{{product?.model}}</h3>
+</div>
+
+<div id="one-product">
+  <div id="one-product-content">
+    <div id="product-img">
+      <img src="assets/img/{{product?.photo.src}}" alt="{{product?.photo.alt}}">
+    </div>
+    <div id="product-det">
+      <div class="detalisInfo">
+        <h4>Detalis</h4>
+        <p><b>Model:</b> {{product?.model}}</p>
+        <p><b>Resolution:</b> {{product?.resolution}}</p>
+        <p><b>Ram Memory:</b> {{product?.ram}}</p>
+        <p><b>Camera:</b> {{product?.camera}}</p>
+        <p><b>Color:</b> {{product?.color}}</p>
+        <p id="price"><b>Price:</b> {{product?.price}}€</p>
+        <span (click)="addToChart(product)">Add to Cart <i class="fas fa-shopping-cart"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+

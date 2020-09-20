@@ -1,0 +1,22 @@
+.qunatity {
+  background: rgb(184, 184, 184);
+  display: flex;
+  justify-content: center;
+  padding: 6px 0px;
+  padding-bottom: 10px;
+}
+.qunatity span
+{
+ padding: 0px 10px;
+}
+.cell-cart
+{
+  background: white;
+}
+
+.changeQunatity {
+  background: rgb(255, 255, 255);
+  font-size: 0.8em;
+  padding: 2px !important;
+  border-radius: 50%;
+}

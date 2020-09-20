@@ -1,0 +1,664 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  max-width: 100%;
+}
+body
+{
+  background: url("assets/img/products.png") repeat;
+  margin-top: 85px;
+  margin-bottom: 155px;
+}
+.content
+{
+  margin-top: 80px;
+
+}
+.element {
+  width: 100%;
+}
+
+#top {
+  width: 53px;
+  height: 53px;
+  background: rgba(107, 100, 100, 0.705);
+  position: fixed;
+  bottom: 24px;
+  right: 35px;
+  font-size: 2.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top a {
+  color: rgba(20, 19, 19, 0.911);
+}
+
+
+/* copy //////////////////////////////////////////////////////////////////////////*/
+
+.element.copy {
+  min-height: 36px;
+  background: rgb(173, 173, 177);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;  position: fixed;
+  bottom: 0px;
+}
+
+.element.copy .social {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.element.copy .social a {
+  color: white;
+  padding: 6px;
+}
+
+.element.copy .social a:hover {
+  color: black;
+  transition: 0.8s;
+}
+
+.Documentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Documentation a {
+  color: black;
+  font-weight: 1.3em;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.Documentation a:hover {
+  background: white;
+  transition: 0.8s;
+}
+
+.element.copy .copyText {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* second page  */
+
+/* add link button for second page*/
+
+.more.all {
+  margin-left: 6px;
+}
+
+.more.all a {
+  color: white;
+}
+
+/*second page content*/
+
+/* menu */
+
+.element.menuSecond {
+  position: fixed;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  height: 80px;
+  background: black;
+  color: white;
+  padding: 0px 2%;
+}
+
+.element.menuSecond ul {
+  width: inherit;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element.menuSecond ul #logo {
+  margin-right: 20px;
+}
+
+.element.menuSecond ul #logo img {
+  width: 41px;
+  height: 41px;
+}
+
+.element.menuSecond ul .back a {
+  color: white;
+  border: 1px solid white;
+  padding: 9px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.element.menuSecond ul .back a .fas {
+  padding-right: 8px;
+}
+
+.element.menuSecond ul .back a:hover {
+  transition: 0.6s;
+  background: rgb(80, 76, 76);
+}
+
+.element.menuSecond ul #cart {
+  position: relative;
+  display: flex;
+}
+
+.element.menuSecond ul #cart a {
+  color: white;
+}
+
+.element.menuSecond ul #cart p {
+  position: absolute;
+  top: -13px;
+  left: -6px;
+  padding: 2px 4px;
+  font-size: 0.9em;
+  border-radius: 40%;
+  background: rgb(84, 99, 84);
+}
+
+.element.menuSecond ul #cart .fas {
+  font-size: 1.8em;
+}
+
+/* title */
+
+.element.titleSecond {
+  width: 100%;
+  background: white;
+  display: flex;
+  height: 120px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.element.titleSecond h1 {
+  background: rgba(109, 104, 104, 0.514);
+  padding: 17px 24px;
+}
+
+/* search */
+
+.elementNone {
+  display: none;
+}
+
+.elementBlock {
+  display: block;
+}
+
+.element.search {
+  width: 100%;
+  padding: 13px 0px;
+  background: rgb(65, 61, 61);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element.search #search {
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+#noresult {
+  z-index: 200;
+  display: flex;
+  position: relative;
+  width: 200px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+#noresult p {
+  width: 200px;
+  position: absolute;
+  top: 34%;
+  padding: 8px 10px;
+  background: rgba(83, 81, 81, 0.582);
+  font-size: 2em;
+}
+
+.element.search #search #buttonSearch {
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  padding: 11px 14px;
+  font-size: 1.3em;
+}
+
+.element.search #search input[type="text"] {
+  width: 69%;
+  padding: 7px 6px;
+  border-radius: 10px 0px 0px 10px;
+  border-color: black;
+  border-width: 5px;
+  font-size: 0.99em;
+}
+
+.element.search #search input[type="text"]:focus {
+  outline: none;
+  border: none;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(97, 97, 97);
+}
+
+/* all products */
+
+.element.allProducts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.element.allProducts #sort {
+  width: 400px;
+  background: rgb(112, 112, 112);
+  font-size: 1.2em;
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.element.allProducts #sort .titleSort {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding: 5px 18px;
+}
+
+.element.allProducts #sort i {
+  font-size: 1.3em;
+}
+
+.element.allProducts #productsAllSec {
+  width: 100% ;
+  min-height: 100% !important;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 0px;
+  padding-top: 20px;
+}
+
+.product-child
+{
+  width: 26.4%;
+}
+.element.allProducts #productsAllSec .productSec {
+  width: 100%;
+  height: 328px;
+  background: black;
+  margin-top: 20px;
+}
+
+
+@media screen and (min-width:1000px) {
+  .product-child
+  {
+    width: 30.4%;
+  }
+}
+
+.element.allProducts #productsAllSec .productSec .photoProductSec {
+  width: 100%;
+  color: rgb(14, 13, 13);
+  height: 79%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.element.allProducts #productsAllSec .productSec .photoProductSec p {
+  font-weight: bold;
+  background-color: rgba(185, 185, 185, 0.801);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+  width: 60%;
+  padding: 5px 22px;
+  bottom: 10%;
+}
+
+.element.allProducts #productsAllSec .productSec .photoProductSec img {
+  width: 100%;
+  height: 100%;
+}
+
+.element.allProducts #productsAllSec .productSec .photoInfoSec {
+  width: 100%;
+  height: 20%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+}
+
+.element.allProducts #productsAllSec .productSec .photoInfoSec p {
+  color: rgb(37, 37, 37);
+  padding-left: 10px;
+  font-size: 1.4em;
+}
+
+.element.allProducts #productsAllSec .productSec .photoInfoSec .infoCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 5px;
+}
+
+.element.allProducts #productsAllSec .productSec .photoInfoSec .infoCart i:hover {
+  background: rgb(202, 198, 198);
+  transition: 0.6s;
+}
+
+.element.allProducts #productsAllSec .productSec .photoInfoSec .infoCart i {
+  background: rgb(153, 147, 147);
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 8px 16px;
+  font-size: 1.49em;
+}
+
+
+.element.cartTitle {
+  width: 100%;
+  display: flex;
+  height: 120px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.element.cartTitle h1 {
+  background: rgba(109, 104, 104, 0.514);
+  padding: 17px 24px;
+}
+
+.articles {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  background-size: 100% 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.element.articles .articlesList {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  min-height: 0;
+}
+
+.element.articles .articlesList table {
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.element.articles .articlesList table tr {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background: rgb(93, 97, 93);
+}
+
+.element.articles .articlesList table tr td:first-child {
+  width: 70%;
+  height: 40px;
+}
+
+.element.articles .articlesList table tr td:last-child {
+  width: 70%;
+  height: 40px;
+}
+
+#withoutBg {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.delete {
+  font-weight: bolder;
+  color: rgb(146, 0, 0);
+  padding: 7px;
+}
+
+#buy {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: black;
+  font-weight: bold;
+}
+
+#buy:hover {
+  transition: 0.6s;
+  border: 4px solid white;
+}
+
+#total {
+  padding-left: 2%;
+  text-align: left;
+  font-weight: bold;
+  color: black;
+}
+
+.empty {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.empty .text {
+  width: 60%;
+  height: 180px;
+  color: white;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.9em;
+  background: rgba(0, 0, 0, 0.397);
+}
+
+.empty .text i {
+  font-size: 2.2em;
+  padding-bottom: 20px;
+}
+
+.qunatity {
+  background: rgb(116, 116, 116)
+}
+
+.changeQunatity {
+  background: rgb(255, 255, 255);
+  font-size: 0.8em;
+  padding: 2px !important;
+  border-radius: 50%;
+}
+
+@media screen and (min-width:1000px) {
+  .element.articles .articlesList {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 838px) {
+  .product-child
+  {
+    width: 45.4%;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .element.products .articles .product {
+    width: 40%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.products .articles .productmore {
+    width: 40%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.products .articles-ostali .product {
+    width: 40%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.products .articles {
+    padding-bottom: 2px;
+  }
+  .element.articles .articlesList {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .element.menu {
+    flex-direction: column;
+  }
+  .element.menu .items {
+    text-align: center;
+    position: relative;
+    top: 82px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .element.menu .items .item {
+    background: rgba(48, 48, 48, 0.938);
+    position: relative;
+    width: 100%;
+    animation: 1.5s item;
+    padding: 13px 0px;
+  }
+  .element.menu .items .item2 {
+    animation: item2 1.5s;
+  }
+  .element.menu .responsive {
+    display: flex;
+  }
+  .d-none {
+    display: none !important;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .element.copy {
+    flex-direction: column-reverse;
+    padding-top: 15px;
+  }
+  .element.copy .social, .Documentation, .copyText {
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #productAllInfo {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+  .element.home {
+    height: 381px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .product-child
+  {
+    width: 60.4%;
+  }
+  .element.search #search {
+    width: 80%;
+  }
+  .element.articles .articlesList {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .element.allProducts #sort {
+    width: 86%;
+  }
+}
+
+@media screen and (max-width: 489px) {
+  .element.menuSecond ul .back a p {
+    display: none;
+  }
+  .element.menuSecond ul .back a .fas {
+    padding-right: 2px;
+  }
+  .empty .text {
+    width: 82%;
+    text-align: center;
+  }
+  .product-child
+  {
+    width: 70.4%;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  .element.products .articles .product {
+    width: 65%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.products .articles-ostali .product {
+    width: 65%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.products .articles .productmore {
+    width: 65%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.products .articles {
+    padding-bottom: 3px;
+  }
+}
